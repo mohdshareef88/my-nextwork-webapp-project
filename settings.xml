@@ -1,0 +1,36 @@
+<setting>
+
+<servers>
+  <server>
+    <id>javacicddomain-java-cicd-pipeline</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>javacicddomain-java-cicd-pipeline</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>javacicddomain-java-cicd-pipeline</id>
+        <url>https://javacicddomain-697244794930.d.codeartifact.us-east-2.amazonaws.com/maven/java-cicd-pipeline/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>javacicddomain-java-cicd-pipeline</id>
+    <name>javacicddomain-java-cicd-pipeline</name>
+    <url>https://javacicddomain-697244794930.d.codeartifact.us-east-2.amazonaws.com/maven/java-cicd-pipeline/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+
+
+</setting>
